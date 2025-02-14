@@ -9,6 +9,7 @@ const Home = () => {
 
   return (
     <div className="container home">
+      <img className="gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRkNHF6ZWFiZG5yamd4Mm9zMnZ6am13OWZma2txNWZrb3h1bjhvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/19CU3F5v6fq4LawRGu/giphy.gif" alt="gif" />
       <h1 className="title">Will you be my Valentine? <img src={img1} alt="keroppi" /></h1>
       <div className="button-group">
         <button onClick={() => navigate("/love-loop")} className="valentine-button">Yes!</button>

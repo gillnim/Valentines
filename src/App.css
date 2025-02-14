@@ -23,6 +23,10 @@ body {
   text-shadow: 2px 2px #fff;
 }
 
+.gif{
+  width: 30%;
+}
+
 /* Button styles */
 .button-group {
   margin-top: 20px;
