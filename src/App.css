@@ -1,0 +1,230 @@
+/* General styles */
+body {
+  background-color: #ffe4e1;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  color: #ff1493;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Title styles */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff69b4;
+  text-shadow: 2px 2px #fff;
+}
+
+/* Button styles */
+.button-group {
+  margin-top: 20px;
+}
+
+.valentine-button {
+  background-color: #ff1493;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.valentine-button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.1);
+}
+
+/* Love loop page */
+.love-loop {
+  background-color: #ffb6c1;
+}
+
+.love-message {
+  font-size: 3rem;
+  color: #d02090;
+  text-shadow: 2px 2px #fff;
+  overflow: hidden;
+  border-right: 3px solid #d02090; /* Cursor effect */
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Code block styling */
+.code-block {
+  background: #fff0f5; /* Soft pink background */
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  color: #ff1493;
+  box-shadow: 4px 4px 15px rgba(255, 20, 147, 0.3);
+  border-left: 6px solid #ff69b4; /* Adds a nice left border for style */
+  white-space: pre-wrap; /* Ensures text wraps properly */
+  max-width: 90%;
+  text-align: left;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect for a little flair */
+.code-block:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px 20px rgba(255, 20, 147, 0.4);
+}
+
+
+/* GIF styles */
+.love-gif {
+  margin-top: 20px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px rgba(255, 20, 147, 0.5);
+}
+
+/* 💖 Floating Hearts Animation */
+@keyframes float-hearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* 💕 Container for hearts */
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none; /* So hearts don't interfere with buttons */
+}
+
+/* ❤️ Individual heart styles */
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  color: #ff69b4;
+  opacity: 0;
+  animation: float-hearts 5s linear infinite;
+}
+
+/* Randomize heart positions */
+.heart:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.heart:nth-child(2) {
+  left: 30%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+.heart:nth-child(3) {
+  left: 50%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+.heart:nth-child(4) {
+  left: 70%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+.heart:nth-child(5) {
+  left: 90%;
+  animation-duration: 4.5s;
+  animation-delay: 1.5s;
+}
+
+
+/* 📌 Responsive Design Adjustments */
+
+/* For tablets and smaller screens (768px and below) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .valentine-button {
+    font-size: 1.3rem;
+    padding: 8px 16px;
+  }
+
+  .love-message {
+    font-size: 2.5rem;
+  }
+
+  .code-block {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .love-gif {
+    width: 250px;
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .valentine-button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .love-message {
+    font-size: 2rem;
+  }
+
+  .code-block {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .love-gif {
+    width: 200px;
+  }
+}
